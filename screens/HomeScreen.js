@@ -12,9 +12,9 @@ import {
   StatusBar,
   FlatList,
   Item,
+  ImageBackground,
 } from 'react-native';
 
-import tailwind from 'twrnc';
 import Colors from './style/Colors';
 import {useNavigation} from '@react-navigation/native';
 import {
@@ -26,6 +26,9 @@ import {
   Header,
   Avatar,
 } from '@ui-kitten/components';
+Text.defaultProps = Text.defaultProps || {};
+
+Text.defaultProps.style = {fontFamily: 'Inter'};
 
 // const HomeStack = createStackNavigator();
 // const SettingsStack = createStackNavigator();
@@ -78,22 +81,24 @@ const HomeScreen = () => {
                 <Text style={styles.title}>Let’s get started </Text>
               </View>
             </View>
+            <View style={styles.welcomecontainer}>
+              <View style={styles.card}>
+                <View style={styles.cardContent}>
+                  <Layout level="2" style={styles.cardcontent}>
+                    <Text style={styles.cardTitle}>
+                      Medium Full Body Workout
+                    </Text>
 
-            <View style={styles.workoutContainer}>
-              <Card style={styles.card} header={Header} status="warning">
-                <Image
-                  style={styles.workoutImage}
-                  source={require('../assets/workout.jpg')}
-                />
-                <Text>Today's Workout</Text>
-                <Text style={styles.workoutSubtitle}>
-                  Medium Full Body Workout
-                </Text>
-                <View style={styles.workoutInfo}>
-                  <Text style={styles.workoutDuration}>⏱ 45 min</Text>
-                  <Text style={styles.workoutCalories}>🔥 350 Cal</Text>
+                    <Image
+                      style={styles.workoutImage}
+                      source={require('../assets/workout_example.png')}/>
+                  </Layout>
+                  <View style={styles.bottomRow}>
+                    <Text style={styles.bottomText}>🔥 450 kcal</Text>
+                    <Text style={styles.bottomText}>⏱ 45 min</Text>
+                  </View>
                 </View>
-              </Card>
+              </View>
             </View>
           </View>
           {/* Workout Categories */}
@@ -111,12 +116,17 @@ const HomeScreen = () => {
               <Button>Advanced</Button>
             </ButtonGroup>
           </SafeAreaView>
-          <View style={styles.categoriesContainer}>
-          <FlatList
-        data={DATA}
-        renderItem={({item}) => <Item title={item.title} />}
-        keyExtractor={item => item.id}
-      />
+          <View style={styles.card1} header={Header} status="warning">
+            <Image
+              style={styles.workoutImage}
+              source={require('../assets/workout.jpg')}
+            />
+            <Text>Today's Workout</Text>
+            <Text style={styles.workoutSubtitle}>Medium Full Body Workout</Text>
+            <View style={styles.workoutInfo}>
+              <Text style={styles.workoutDuration}>⏱ 45 min</Text>
+              <Text style={styles.workoutCalories}>🔥 350 Cal</Text>
+            </View>
           </View>
 
           {/* Bottom Tab Navigation Placeholder */}
@@ -163,12 +173,21 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  card: {
+    // flexWrap: 'wrap',
     flex: 1,
-    margin: 2,
-    paddingVertical: 1, // Adds vertical padding for better content spacing
+    justifyContent: 'space-between',
+    // backgroundColor: Colors.CARD_LIGHT_BG,
+  },
+  cardcontent: {
+    flexDirection: 'row',
+    // flexWrap: 'wrap',
+    flex: 1,
+    justifyContent: 'space-between',
+    backgroundColor: Colors.CARD_LIGHT_BG,
+  },
+  card1: {
+    width: 300,
+    height: 150,
     borderRadius: 12, // Rounds the corners for a modern look
     shadowColor: 'rgba(0, 0, 0, 0.1)', // Soft shadow color
     shadowOffset: {width: 0, height: 4}, // Shadow positioning
@@ -176,11 +195,40 @@ const styles = StyleSheet.create({
     shadowRadius: 6, // Shadow spread (for iOS)
     elevation: 3, // Shadow elevation (for Android)
     borderColor: '#f0f0f0', // Light border color for definition
-    borderWidth: 1, // Thin border width
+    backgroundColor: Colors.BASE_LIGHT,
+  },
+  card: {
+    backgroundColor: Colors.CARD_LIGHT_BG, // Adjust the color to match your card's background
+    borderRadius: 10, // Rounded corners
+    padding: 16, // Padding inside the card
+    shadowColor: '#000', // Shadow color
+    shadowOffset: {width: 0, height: 2}, // Shadow offset
+    shadowOpacity: 0.25, // Shadow opacity
+    shadowRadius: 3.84, // Shadow radius
+    elevation: 5, // Elevation for Android
+  },
+
+  bottomRow: {
+    flexDirection: 'row', // Align bottom items in a row
+    justifyContent: 'flex-end', // Even space around the items
+    alignItems: 'center', // Center items vertically
+  },
+  bottomText: {
+    fontSize: 11, // Set the font size for the bottom text
+    // Add additional styling for the text if needed
+    paddingHorizontal: 3, // Add padding to the text
   },
 
   buttonGroup: {
     margin: 2,
+  },
+  cardTitle: {
+    fontSize: 16,
+    color: Colors.ACCENT_ORANGE,
+    // padding: 10,
+    // margin: 10,
+    marginTop: 26,
+    width: 120,
   },
   controlContainer: {
     borderRadius: 4,
@@ -201,10 +249,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: StatusBar.currentHeight || 0, // Add padding to prevent content from being under the status bar
     // ... other styles if needed ...
-  },
-  container: {
-    flex: 1,
-    backgroundColor: Colors.BASE_LIGHT,
   },
   scrollView: {
     flex: 1,
@@ -239,8 +283,8 @@ const styles = StyleSheet.create({
     borderRadius: 25,
   },
   workoutContainer: {
-    paddingHorizontal: 20,
-    marginBottom: 20,
+    // paddingHorizontal: 20,
+    // marginBottom: 20,
     borderRadius: 8, // Softens the corners
     shadowColor: '#000', // Shadow color for iOS
     shadowOffset: {width: 1, height: 2}, // Position of the shadow
@@ -256,10 +300,10 @@ const styles = StyleSheet.create({
     color: Colors.BLACK_TEXT,
   },
   workoutImage: {
-    height: 200,
-    width: '100%',
-    borderRadius: 6,
+    height: 70,
+    width: '60%',
     marginBottom: 10,
+    justifyContent: 'flex-end',
   },
   workoutTitle: {
     fontSize: 24,
