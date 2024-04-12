@@ -11,12 +11,22 @@ import HomeScreen from "./screens/HomeScreen";
 import SettingsScreen from './screens/SettingsScreen';
 import StartWorkoutScreen from './screens/StartWorkoutScreen';
 import ExercisesScreen from './screens/test';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 
 // Create stack and tab navigators
 const Tab = createBottomTabNavigator();
 
+const HomeStack = createNativeStackNavigator();
 
+function HomeStackScreen() {
+  return (
+    <HomeStack.Navigator screenOptions={{ headerShown: false }}>
+      <HomeStack.Screen name="HomeScreen" component={HomeScreen} />
+      <HomeStack.Screen name="Start Workout" component={StartWorkoutScreen} />
+    </HomeStack.Navigator>
+  );
+}
 
 // Bottom tab navigator setup
 function MyTabs() {
@@ -28,11 +38,10 @@ function MyTabs() {
       headerShown: false,
     }}>
       
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Home" component={HomeStackScreen} />
       <Tab.Screen name="Settings" component={SettingsScreen} />
       <Tab.Screen name="Exercises" component={ExercisesScreen} />
       
-      {/* Add more tabs here as needed, potentially with their own stack navigators */}
     </Tab.Navigator>
     </ApplicationProvider>
 
