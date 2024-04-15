@@ -299,8 +299,12 @@ export const styles = StyleSheet.create({
     marginHorizontal: 50,
     height: 50,
     width: 150,
-    marginTop: 130,
+    marginTop: 130
   
 
   },
+
+  listContainer: {
+    flex: 1,
+  }
 });

@@ -1,11 +1,11 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons'; // For tab icons
 import Colors from '../screens/style/Colors';
 
 // Import your screen components
 import HomeScreen from '../screens/HomeScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import SettingsScreen from '../screens/ExerciseListScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import InsightsScreen from '../screens/InsightsScreen';
 import StartWorkoutScreen from '../screens/StartWorkoutScreen';
@@ -15,8 +15,8 @@ const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
+      screenOptions={({route}) => ({
+        tabBarIcon: ({focused, color, size}) => {
           let iconName;
 
           if (route.name === 'Home') {
@@ -41,8 +41,7 @@ const BottomTabNavigator = () => {
           fontSize: 12,
         },
         tabBarShowLabel: false,
-      })}
-    >
+      })}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Settings" component={SettingsScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />

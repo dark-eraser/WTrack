@@ -1,0 +1,123 @@
+{
+    "exercises": [
+        {
+            "id": 1,
+            "name": "Hammer Curl",
+            "muscle_group": "Biceps",
+            "category": "Strength",
+            "equipment": "Dumbbell",
+            "difficulty": 2,
+            "description": "Stand with your feet shoulder-width apart, holding a dumbbell in each hand. Keep your elbows close to your torso and curl the weights up to shoulder level. Slowly lower the weights back down to the starting position. ",
+            "reps": 2,
+            "sets": 3,
+            "weight": 10,
+            "rest": 60
+        },
+        {
+            "id": 2,
+            "name": "Tricep Dip",
+            "muscle_group": "Triceps",
+            "category": "Strength",
+            "equipment": "Bodyweight",
+            "difficulty": 2,
+            "description": "Sit on a bench or chair with your hands placed next to your hips. Lift your body off the bench and slowly lower yourself down by bending your elbows. Push yourself back up to the starting position. ",
+            "reps": 10,
+            "sets": 3,
+            "weight": 0,
+            "rest": 60
+        },
+        {
+            "id": 3,
+            "name": "Push-Up",
+            "muscle_group": "Chest",
+            "category": "Strength",
+            "equipment": "Bodyweight",
+            "difficulty": 1,
+            "description": "Start in a plank position with your hands shoulder-width apart. Lower your body down by bending your elbows, keeping your back straight. Push yourself back up to the starting position. ",
+            "reps": 10,
+            "sets": 3,
+            "weight": 0,
+            "rest": 60
+        },
+        {
+            "id": 4,
+            "name": "Plank",
+            "muscle_group": "Core",
+            "category": "Strength",
+            "equipment": "Bodyweight",
+            "difficulty": 1,
+            "description": "Start in a push-up position with your hands directly under your shoulders. Hold your body in a straight line from head to heels, engaging your core muscles. Hold this position for 30 seconds to 1 minute. ",
+            "reps": 1,
+            "sets": 3,
+            "weight": 0,
+            "rest": 60
+        },
+        {
+            "id": 5,
+            "name": "Squat",
+            "muscle_group": "Legs",
+            "category": "Strength",
+            "equipment": "Bodyweight",
+            "difficulty": 1,
+            "description": "Stand with your feet shoulder-width apart, toes pointed slightly out. Lower your body down by bending your knees and pushing your hips back. Keep your chest up and back straight. Push yourself back up to the starting position. ",
+            "reps": 10,
+            "sets": 3,
+            "weight": 0,
+            "rest": 60
+        },
+        {
+            "id": 6,
+            "name": "Lunge",
+            "muscle_group": "Legs",
+            "category": "Strength",
+            "equipment": "Bodyweight",
+            "difficulty": 1,
+            "description": "Stand with your feet hip-width apart. Take a step forward with your right leg and lower your body down until both knees are bent at a 90-degree angle. Push yourself back up to the starting position. Repeat on the other leg. ",
+            "reps": 10,
+            "sets": 3,
+            "weight": 0,
+            "rest": 60
+        },
+        {
+            "id": 7,
+            "name": "Deadlift",
+            "muscle_group": "Back",
+            "category": "Strength",
+            "equipment": "Dumbbell",
+            "difficulty": 3,
+            "description": "Stand with your feet hip-width apart, holding a dumbbell in each hand. Hinge at the hips and lower the weights down towards the floor, keeping your back straight. Push through your heels to return to the starting position. ",
+            "reps": 10,
+            "sets": 3,
+            "weight": 10,
+            "rest": 60
+        },
+        {
+            "id": 8,
+            "name": "Bent-Over Row",
+            "muscle_group": "Back",
+            "category": "Strength",
+            "equipment": "Dumbbell",
+            "difficulty": 2,
+            "description": "Stand with your feet hip-width apart, holding a dumbbell in each hand. Hinge at the hips and lower your torso until it is almost parallel to the floor. Pull the weights up towards your chest, squeezing your shoulder blades together. Slowly lower the weights back down. ",
+            "reps": 10,
+            "sets": 3,
+            "weight": 10,
+            "rest": 60
+        },
+        {
+            "id": 9,
+            "name": "Russian Twist",
+            "muscle_group": "Core",
+            "category": "Strength",
+            "equipment": "Bodyweight",
+            "difficulty": 1,
+            "description": "Sit on the floor with your knees bent and feet lifted off the ground. Lean back slightly and twist your torso to the right, then to the left, while holding a weight or medicine ball. ",
+            "reps": 10,
+            "sets": 3,
+            "weight": 5,
+            "rest": 60
+        },
+
+
+    ]
+}
