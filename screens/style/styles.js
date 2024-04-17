@@ -66,9 +66,7 @@ export const styles = StyleSheet.create({
   scrollView: {
     flex: 1,
   },
-  contentContainer: {
-    paddingBottom: 100, // Height of the bottom tab nav
-  },
+
   welcomecontainer: {
     backgroundColor: Colors.LIGHT_ORANGE,
     padding: 20,
@@ -95,17 +93,6 @@ export const styles = StyleSheet.create({
     height: 50,
     borderRadius: 25,
   },
-  workoutContainer: {
-    // paddingHorizontal: 20,
-    // marginBottom: 20,
-    borderRadius: 8, // Softens the corners
-    shadowColor: '#000', // Shadow color for iOS
-    shadowOffset: {width: 1, height: 2}, // Position of the shadow
-    shadowOpacity: 0.23, // Shadow opacity
-    shadowRadius: 1.62, // Blur radius of the shadow
-    elevation: 4, // Elevation for Android to show shadow
-  },
-
   sectionTitle: {
     fontWeight: 'bold',
     fontSize: 18,
@@ -305,6 +292,37 @@ export const styles = StyleSheet.create({
   },
 
   listContainer: {
-    flex: 1,
-  }
+    // flex: 1,
+    justifyContent: 'flex-start',
+    flexGrow: 1,
+
+  },
+  itemContainer: {
+    backgroundColor: '#f9f9f9',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    borderRadius: 10,
+  },
+  itemName: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  itemDetails: {
+    fontSize: 14,
+    color: '#666',
+    paddingTop: 25,
+  },
+  subtitle: {
+    fontSize: 14,
+    color: '#666',
+    paddingTop: 5,
+  },
+  subCategoryTitle: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: Colors.BLACK_TEXT,
+    marginBottom: 10,
+    marginLeft: 20,
+  },
 });

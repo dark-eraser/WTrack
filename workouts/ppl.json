@@ -1,0 +1,55 @@
+{
+    "workouts": [
+        {
+            "name": "Legs",
+            "id": 3,
+            "exercises": [
+                {
+                    "exerciseId": 1
+                },
+                {
+                    "exerciseId": 2
+                },
+                {
+                    "exerciseId": 3
+                }
+            ],
+            "length": "50 minutes",
+            "difficulty": "Intermediate"
+        },
+        {
+            "name": "Push",
+            "id": 1,
+            "exercises": [
+                {
+                    "exerciseId": 1
+                },
+                {
+                    "exerciseId": 2
+                },
+                {
+                    "exerciseId": 3
+                }
+            ],
+            "length": "55 minutes",
+            "difficulty": "Intermediate"
+        },
+        {
+            "name": "Pull",
+            "id": 2,
+            "exercises": [
+                {
+                    "exerciseId": 1
+                },
+                {
+                    "exerciseId": 2
+                },
+                {
+                    "exerciseId": 3
+                }
+            ],
+            "length": "60 minutes",
+            "difficulty": "Advanced"
+        }
+    ]
+}
